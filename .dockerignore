@@ -1,0 +1,9 @@
+data/*
+!data/README.md
+
+.Rproj.user
+.Rhistory
+.RData
+.DS_Store
+.git
+.gitignore

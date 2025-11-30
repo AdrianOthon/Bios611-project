@@ -1,0 +1,11 @@
+# prevent huge files entering GitHub
+data/*
+!data/README.md
+
+figures/*
+results/*
+
+.Rproj.user
+.Rhistory
+.RData
+.DS_Store
