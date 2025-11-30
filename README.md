@@ -16,7 +16,7 @@ R Markdown and can be reproduced from scratch with a single command.
 ---
 
 ## Content
-
+```bash
 bios611-project/
 ├── code/
 │   └── carotid_analysis.R
@@ -29,6 +29,7 @@ bios611-project/
 ├── Dockerfile                       # reproducible R environment
 ├── makefile                         # project automation
 └── README.md                        # this file
+```
 
 
 ---
@@ -77,6 +78,9 @@ Download the input dataset from the link below:
 ---
 
 ## How to Build and Run the Project
+
+Before starting please make you have downloaded the dataset from https://adminliveunc-my.sharepoint.com/:u:/g/personal/aothon_ad_unc_edu/IQAJkKL9pXtkTr0ER-_6MxjpAcXAEZJEq_7CTadr3agwMC8?e=Slr9zj
+and saved it under data/adrian_smc_small.rds
 
 ### 1. Clone the repository
 
