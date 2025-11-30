@@ -45,8 +45,9 @@ human carotid plaque tissue (endarterectomy samples). The dataset includes:
 - additional stromal and immune populations  
 
 A cleaned and preprocessed Seurat object is stored under `data/`. Because the 
-file is large, it is **not included** in the GitHub repository; instead, `data/README.md`
-provides instructions for obtaining it.
+file is large, it is **not included** in the GitHub repository; instead, follow the link below to download the dataset. It is important that you save the Seurat object as  data/adrian_smc_small.rds
+
+https://adminliveunc-my.sharepoint.com/:u:/g/personal/aothon_ad_unc_edu/IQAJkKL9pXtkTr0ER-_6MxjpAcXAEZJEq_7CTadr3agwMC8?e=Slr9zj
 
 ---
 
@@ -69,6 +70,10 @@ All output figures are saved to `figures/`. Intermediate objects are stored in `
 
 The final R Markdown report (`report.Rmd`) integrates these figures with interpretive text.
 
+Download the input dataset from the link below:
+
+
+
 ---
 
 ## How to Build and Run the Project
@@ -78,17 +83,22 @@ The final R Markdown report (`report.Rmd`) integrates these figures with interpr
 ```bash
 git clone <your-repo-url>
 cd bios611-project
+```
 
 ### 2. Build the Docker Image 
 
+```bash
 docker build -t bios611-project .
+```
 
 ### 3. Run the container with RStudio Server 
 
+```bash
 docker run --rm -p 8787:8787 \
   -e PASSWORD=rstudio \
   -v "$(pwd)":/home/rstudio/bios611-project \
   bios611-project
+```
 
 Then open http://localhost:8787 in your browser
 
@@ -98,8 +108,10 @@ Login with username: rstudio, password: rstudio
 
 Inside the RStudio terminal run: 
 
+```
 cd ~/bios611-project
 make
+```
 
 This will:
 
