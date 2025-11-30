@@ -82,6 +82,8 @@ Download the input dataset from the link below:
 Before starting please make you have downloaded the dataset from https://adminliveunc-my.sharepoint.com/:u:/g/personal/aothon_ad_unc_edu/IQAJkKL9pXtkTr0ER-_6MxjpAcXAEZJEq_7CTadr3agwMC8?e=Slr9zj
 and saved it under data/adrian_smc_small.rds
 
+Also, in Docker.Desktop increase the amount of memory space to 16GB. This is the minimum requirement to run the code based on the Seurat object size. 
+
 ### 1. Clone the repository
 
 ```bash
