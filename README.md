@@ -45,10 +45,13 @@ human carotid plaque tissue (endarterectomy samples). The dataset includes:
 - T cells and NK cells  
 - additional stromal and immune populations  
 
-A cleaned and preprocessed Seurat object is stored under `data/`. Because the 
-file is large, it is **not included** in the GitHub repository; instead, follow the link below to download the dataset. It is important that you save the Seurat object as  data/adrian_smc_small.rds
+A cleaned and preprocessed Seurat object is stored under `data/`. 
+
+Because the file is large, it is **not included** in the GitHub repository; instead, follow the link below to download the dataset. It is important that you save the Seurat object as  data/adrian_smc_small.rds
 
 https://adminliveunc-my.sharepoint.com/:u:/g/personal/aothon_ad_unc_edu/IQAJkKL9pXtkTr0ER-_6MxjpAcXAEZJEq_7CTadr3agwMC8?e=Slr9zj
+
+You can also email me at adrian_othon@med.unc.edu for access if the link does not work.
 
 ---
 
