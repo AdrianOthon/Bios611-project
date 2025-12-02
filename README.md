@@ -16,7 +16,7 @@ R Markdown and can be reproduced from scratch with a single command.
 ---
 
 ## Content
-
+```bash
 bios611-project/
 ├── code/
 │   └── carotid_analysis.R
@@ -29,6 +29,7 @@ bios611-project/
 ├── Dockerfile                       # reproducible R environment
 ├── makefile                         # project automation
 └── README.md                        # this file
+```
 
 
 ---
@@ -44,9 +45,13 @@ human carotid plaque tissue (endarterectomy samples). The dataset includes:
 - T cells and NK cells  
 - additional stromal and immune populations  
 
-A cleaned and preprocessed Seurat object is stored under `data/`. Because the 
-file is large, it is **not included** in the GitHub repository; instead, `data/README.md`
-provides instructions for obtaining it.
+A cleaned and preprocessed Seurat object is stored under `data/`. 
+
+Because the file is large, it is **not included** in the GitHub repository; instead, follow the link below to download the dataset. It is important that you save the Seurat object as  data/adrian_smc_small.rds
+
+https://adminliveunc-my.sharepoint.com/:u:/g/personal/aothon_ad_unc_edu/IQAJkKL9pXtkTr0ER-_6MxjpAcXAEZJEq_7CTadr3agwMC8?e=Slr9zj
+
+You can also email me at adrian_othon@med.unc.edu for access if the link does not work.
 
 ---
 
@@ -69,26 +74,40 @@ All output figures are saved to `figures/`. Intermediate objects are stored in `
 
 The final R Markdown report (`report.Rmd`) integrates these figures with interpretive text.
 
+Download the input dataset from the link below:
+
+
+
 ---
 
 ## How to Build and Run the Project
+
+Before starting please make you have downloaded the dataset from https://adminliveunc-my.sharepoint.com/:u:/g/personal/aothon_ad_unc_edu/IQAJkKL9pXtkTr0ER-_6MxjpAcXAEZJEq_7CTadr3agwMC8?e=Slr9zj
+and saved it under data/adrian_smc_small.rds
+
+Also, in Docker.Desktop increase the amount of memory space to 16GB. This is the minimum requirement to run the code based on the Seurat object size. 
 
 ### 1. Clone the repository
 
 ```bash
 git clone <your-repo-url>
 cd bios611-project
+```
 
 ### 2. Build the Docker Image 
 
+```bash
 docker build -t bios611-project .
+```
 
 ### 3. Run the container with RStudio Server 
 
+```bash
 docker run --rm -p 8787:8787 \
   -e PASSWORD=rstudio \
   -v "$(pwd)":/home/rstudio/bios611-project \
   bios611-project
+```
 
 Then open http://localhost:8787 in your browser
 
@@ -98,8 +117,10 @@ Login with username: rstudio, password: rstudio
 
 Inside the RStudio terminal run: 
 
+```
 cd ~/bios611-project
 make
+```
 
 This will:
 
