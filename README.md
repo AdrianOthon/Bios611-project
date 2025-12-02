@@ -8,8 +8,8 @@ human carotid endarterectomy tissue. The workflow demonstrates how to organize,
 containerize, and automate a complete data-science analysis using Docker, 
 Make, and R.
 
-All computational steps—including dimensionality reduction, clustering, marker 
-identification, and figure generation—are performed inside a controlled Docker 
+All computational steps, including dimensionality reduction, clustering, marker 
+identification, and figure generation, are performed inside a controlled Docker 
 environment and orchestrated with a Makefile. The final report is built using 
 R Markdown and can be reproduced from scratch with a single command.
 
